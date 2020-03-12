@@ -9,7 +9,7 @@ body {
 
 .header {
   height: 700px;
-  background: url(/images/header.jpg);
+  background: url(../images/header.jpg);
   padding-top: 24px;
   padding-bottom: 48px;
   justify-content: center;
@@ -43,7 +43,7 @@ body {
 .header__logo {
   height: 76px;
   width: 115px;
-  background-image: url(/images/logo.png);
+  background-image: url(../images/logo.png);
   background-size: cover;
 }
 
