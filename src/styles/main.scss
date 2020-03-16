@@ -10,6 +10,9 @@ body {
 .header {
   height: 700px;
   background: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: 24px;
   padding-bottom: 48px;
   justify-content: center;
@@ -140,6 +143,7 @@ body {
 .gallery {
   &__caption {
     margin: 24px 0 40px;
+
   }
 
   &__link {
@@ -302,7 +306,8 @@ a {
   justify-content: space-between;
 
   &__text {
-    width: 413px;
+    max-width: 413px;
+    padding-right: 30px;
   }
 
   &__heading {
@@ -317,15 +322,12 @@ a {
     line-height: 27px;
   }
 
-  &__form {
-    width: 413px;
-  }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  width: 413px;
 
   &__item {
     margin-bottom: 16px;
@@ -333,13 +335,15 @@ a {
 
 }
 
-input {
+.input {
   background: #f7f8ff;
   border: 1px solid #fff;
   border-radius: 8px;
   font-size: 14px;
-  width: 413px;
-  padding: 17px 0 17px 17px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 17px;
+  margin-right: -17px;
 }
 
 .button {
@@ -361,4 +365,81 @@ input {
 .container {
   width: 1020px;
   margin: 0 auto;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  justify-content: space-between;
+}
+
+.person {
+  text-align: center;
+
+  &__photo {
+    width: 153px;
+    height: 153px;
+    border-radius: 100% ;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0075ff;
+    margin-top: 28px;
+  }
+
+  &__position {
+    font-size: 14px;
+    line-height: 27px;
+    color: #9fadc2;
+    margin: 4px 0;
+  }
+
+  &__text {
+    line-height: 27px;
+    margin-top: 0;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 413px;
+
+    &--right {
+      padding-right: 30px;
+    }
+  }
+}
+
+.information {
+  line-height: 27px;
+
+  &__title {
+    font-size: 14px;
+    color: #9fadc2;
+  }
+}
+
+.footer {
+
+  bottom: 0;
+  z-index: -1;
+  height: 360px;
+  background-image: url("../images/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+
+  &__logo {
+    margin-top: 243px;
+  }
 }
